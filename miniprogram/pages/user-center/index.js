@@ -4,25 +4,43 @@ Page({
     isLogin: false,
     userInfo: {}
   },
-  onLogin(e) {
+  onLogin: function(e) {
     // 调用微信内置的授权机制
     wx.login({
       success: (res) => {
         if (res.code) {
-          // 发起网络请求
-          const res = wx.cloud.callContainer({
-            config: {
-              env: 'prod-6gqmrfeze3773805', // 微信云托管的环境ID
-            },
-            path: '/login', // 填入业务自定义路径和参数，根目录，就是 / 
-            method: 'POST', // 按照自己的业务开发，选择对应的方法
+          // 发起网络请求到本地服务器
+          wx.request({
+            url: 'http://127.0.0.1:8080/login', // 替换为你的本地服务器地址和登录接口路径
+            method: 'POST',
             header: {
-              'X-WX-SERVICE': 'liliaoyi-backward', // xxx中填入服务名称（微信云托管 - 服务管理 - 服务列表 - 服务名称），在上述实践中是 demo
+              'content-type': 'application/json' // 设置请求头为JSON类型
+            },
+            data: {
+              code: res.code
+            },
+            success: (res) => {
+              if (res.data.success) {
+                // 假设后端返回用户信息
+                this.setData({
+                  isLogin: true,
+                  userInfo: res.data.userInfo
+                });
+              } else {
+                wx.showToast({
+                  title: '登录失败',
+                  icon: 'none'
+                });
+              }
+            },
+            fail: function(error) {
+              console.error('请求失败', error);
+              wx.showToast({
+                title: '请求失败',
+                icon: 'none'
+              });
             }
-            // 其余参数同 wx.request
           });
-          
-          console.log(res);
         } else {
           console.log('获取用户登录态失败！' + res.errMsg);
         }

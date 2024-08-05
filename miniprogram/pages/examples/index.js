@@ -26,7 +26,7 @@ Page({
   goToLogin: function() {
     // 跳转到登录页面
     wx.navigateTo({
-      url: '/pages/user-center/index' // 替换为你的登录页面路径
+      url: '/pages/user-center/index.wxml' // 替换为你的登录页面路径
     });
   }
 });
