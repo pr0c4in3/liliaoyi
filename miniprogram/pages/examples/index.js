@@ -6,22 +6,35 @@ Page({
     isLogin: false,
     userInfo: {}
   },
-  onLoad: function() {
+  onShow: function() {
     this.checkLoginStatus();
   },
   checkLoginStatus: function() {
-    // 检查登录状态，这里以localStorage模拟，实际项目中可能需要调用后端接口
-    const userInfo = wx.getStorageSync('userInfo');
-    if (userInfo) {
-      this.setData({
-        isLogin: true,
-        userInfo: userInfo
-      });
-    } else {
-      this.setData({
-        isLogin: false
-      });
-    }
+    // 检查登录状态
+    var that = this;
+    wx.checkSession({
+      success () {
+                         // 从本地存储获取用户信息
+        let userInfo = wx.getStorageSync('userInfo');
+        that.setData({
+              isLogin: true,
+              userInfo: userInfo
+            });
+        console.log('用户信息',that.data.userInfo);
+        //session_key 未过期，并且在本生命周期一直有效
+      }
+    })
+    // const userInfo = wx.getStorageSync('userInfo');
+    // if (userInfo) {
+    //   this.setData({
+    //     isLogin: true,
+    //     userInfo: userInfo
+    //   });
+    // } else {
+    //   this.setData({
+    //     isLogin: false
+    //   });
+    // }
   },
   goToLogin: function() {
     // 跳转到登录页面

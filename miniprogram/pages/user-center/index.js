@@ -4,6 +4,25 @@ Page({
     isLogin: false,
     userInfo: {}
   },
+  onShow: function() {
+    this.checkLoginStatus();
+  },
+  checkLoginStatus: function() {
+    // 检查登录状态
+    var that = this;
+    wx.checkSession({
+      success () {
+                         // 从本地存储获取用户信息
+        let userInfo = wx.getStorageSync('userInfo');
+        that.setData({
+              isLogin: true,
+              userInfo: userInfo
+            });
+        console.log('用户信息',that.data.userInfo);
+        //session_key 未过期，并且在本生命周期一直有效
+      }
+    })
+  },
   onLogin: function(e) {
     // 调用微信内置的授权机制
     wx.login({
@@ -26,6 +45,9 @@ Page({
                   isLogin: true,
                   userInfo: res.data.userInfo
                 });
+                // 存储用户信息到本地存储
+                wx.setStorageSync('userInfo', this.data.userInfo);
+                console.log(this.data.userInfo);
               } else {
                 wx.showToast({
                   title: '登录失败',
