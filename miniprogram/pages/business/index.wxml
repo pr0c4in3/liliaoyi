@@ -1,5 +1,14 @@
 <!--index.wxml-->
 <view class="container">
+  <textarea class="textarea" placeholder="请输入您的评价" auto-height bindinput="onInput"/>
+  <view class="rate">
+    <block wx:for="{{stars}}" wx:key="index">
+      <image src="{{item}}" mode="aspectFit" bindtap="onStarTap" data-index="{{index}}"/>
+    </block>
+  </view>
+  <button class="submit" bindtap="submitReview">提交评价</button>
+</view>
+<!-- <view class="container">
   <view class="title">业务示例</view>
   <view class="top_tip">使用云开发快速实现业务功能</view>
   <view class="power" wx:key="title" wx:for="{{businessList}}" wx:for-item="business">
@@ -29,4 +38,4 @@
 
   <cloud-tip-modal showUploadTipProps="{{showUploadTip}}"></cloud-tip-modal>
 
-</view>
+</view> -->

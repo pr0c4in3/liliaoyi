@@ -1,6 +1,15 @@
 <!--index.wxml-->
 <view class="container">
-
+  <view class="user-info-container">
+  <view class="user-info" wx:if="{{isLogin}}">
+    <image class="avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill" />
+    <text class="nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="login-prompt" wx:if="{{!isLogin}}">
+    <text>您还未登录，请先登录。</text>
+    <button class="login-button" bindtap="goToLogin">去登录</button>
+  </view>
+</view>
   <!-- <view class="title">快速了解云开发</view>
   <view class="top_tip">免鉴权接口调用 免部署后台 高并发</view>
   <view class="power" wx:key="title" wx:for="{{powerList}}" wx:for-item="power">

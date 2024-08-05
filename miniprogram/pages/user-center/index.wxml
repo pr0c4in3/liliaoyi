@@ -1,5 +1,14 @@
 <!-- pages/me/index.wxml -->
-<view class="page_container">
+<view class="container">
+  <view wx:if="{{!isLogin}}" class="login-section">
+    <button class="login-button" open-type="getUserInfo" bindgetuserinfo="onLogin">微信登录</button>
+  </view>
+  <view wx:if="{{isLogin}}" class="user-section">
+    <text class="welcome-message">欢迎, {{userInfo.nickName}}!</text>
+    <image class="avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill" />
+  </view>
+</view>
+<!-- <view class="page_container">
   <view class="top_bg" />
   <view class="main_content">
     <view class="userinfo_container">
@@ -11,7 +20,7 @@
         <view class="username">openId: {{ openId }}</view>
       </block>
     </view>
-    <view class="settings_container">
+    <view class="settings_container"> -->
       <!-- <view class="setting_item">
         <view class="left">
           <image class="setting_icon" src="../../images/icons/setting.svg" />
@@ -26,11 +35,11 @@
         </view>
         <image class="arrow_icon" src="../../images/arrow.svg" />
       </view> -->
-      <view class="setting_item">
+      <!-- <view class="setting_item">
         <view class="left">
-          <image class="setting_icon" src="../../images/icons/customer-service.svg" />
+          <image class="setting_icon" src="../../images/icons/customer-service.svg" /> -->
           <!-- <view class="setting_text">联系客服</view> -->
-          <button open-type="contact" class="contact-button">
+          <!-- <button open-type="contact" class="contact-button">
             联系客服
           </button>
         </view>
@@ -46,4 +55,4 @@
     </view>
   </view>
   <cloud-tip-modal showUploadTipProps="{{showUploadTip}}" />
-</view>
+</view> -->

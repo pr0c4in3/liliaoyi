@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "业务示例",
+  "navigationBarTitleText": "用户评价",
   "usingComponents": {
     "cloud-tip-modal": "/components/cloudTipModal/index"
   }

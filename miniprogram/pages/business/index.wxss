@@ -1,6 +1,29 @@
 /**index.wxss**/
-
-page {
+.container {
+  padding: 20px;
+}
+.textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  /* 多行文本框的样式 */
+  min-height: 100px; /* 设置最小高度 */
+  font-size: 16px; /* 字体大小 */
+}
+.rate image {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+.submit {
+  background-color: #1AAD19;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+/* page {
   padding-top: 54rpx;
   background-color: #f6f6f6;
   padding-bottom: 60rpx;
@@ -139,4 +162,4 @@ page {
   color: rgba(0, 0, 0, 0.4);
   font-size: 24rpx;
   margin-top: 25%;
-}
+} */
