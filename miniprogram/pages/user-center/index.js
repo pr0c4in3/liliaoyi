@@ -10,7 +10,7 @@ Page({
       success: (res) => {
         if (res.code) {
           // 发起网络请求
-          const res = await wx.cloud.callContainer({
+          const res = wx.cloud.callContainer({
             config: {
               env: 'prod-6gqmrfeze3773805', // 微信云托管的环境ID
             },
