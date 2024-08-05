@@ -1,6 +1,10 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="main">
+  <view class="title font_title_1">王氏中医理疗仪介绍</view>
+  <view class="sub_title">
+      内容
+    </view>
+  <!-- <view class="main">
     <view class="title font_title_1">快速开始</view>
     <view class="sub_title">
       欢迎使用云开发！本页将带你了解如何使用云开发提供的能力快速开发小程序。
@@ -54,5 +58,5 @@
     </view>
     <view  class="bottom-tip">此外，云开发还提供了云模板、云后台、云托管等更多高级能力，可点击下方按钮前往查看。</view>
     <view class="button" bind:tap="discoverCloud">探索云开发更多功能</view>
-  </view>
+  </view> -->
 </view>
