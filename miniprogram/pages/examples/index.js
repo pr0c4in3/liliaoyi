@@ -25,9 +25,18 @@ Page({
   },
   goToLogin: function() {
     // 跳转到登录页面
-    wx.navigateTo({
-      url: '/pages/user-center/index.wxml' // 替换为你的登录页面路径
+    // 获取当前页面的完整路径（不包括查询字符串）
+    // 跳转到应用内的某个页面
+    wx.switchTab({
+      url: '/pages/user-center/index', // 替换为你的登录页面路径
+      success: function(res) {
+        console.log('跳转成功');
+      },
+      fail: function(err) {
+        console.error('跳转失败', err);
+      }
     });
+    
   }
 });
 
