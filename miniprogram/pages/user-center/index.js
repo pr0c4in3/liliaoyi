@@ -4,6 +4,7 @@ Page({
     isLogin: false,
     userInfo: {}
   },
+  
   onShow: function() {
     this.checkLoginStatus();
   },
@@ -24,6 +25,36 @@ Page({
     })
   },
   onLogin: function(e) {
+    // 定义发送用户信息到后台的函数
+    function sendUserInfoToBackend(userInfo) {
+      // // 从本地存储中读取用户信息
+      // const userInfo = wx.getStorageSync('userInfo');
+      
+      // 检查用户信息是否存在
+      if (userInfo) {
+        // 发送用户信息到后台
+        wx.request({
+          url: 'http://127.0.0.1:8080/user', // 替换为你的后台API地址
+          method: 'POST',
+          data: {
+            userInfo: userInfo
+          },
+          success: (res) => {
+            console.log('用户信息发送成功', res);
+            // 这里可以处理发送成功后的逻辑
+          },
+          fail: (err) => {
+            console.error('发送用户信息失败', err);
+            // 这里可以处理发送失败的逻辑
+          }
+        });
+      } else {
+        console.error('用户信息不存在');
+        // 这里可以处理用户信息不存在的逻辑，例如提示用户重新授权
+      }
+    }
+
+
     // 调用微信内置的授权机制
     wx.login({
       success: (res) => {
@@ -40,6 +71,25 @@ Page({
             },
             success: (res) => {
               if (res.data.success) {
+                // 获取用户信息
+                // 检查用户是否已授权
+                wx.getSetting({
+                  success: res => {
+                    if (res.authSetting['scope.userInfo']) {
+                      // 已经授权，获取用户信息
+                      wx.getUserInfo({
+                        success: res => {
+                          // 存储用户信息到全局变量
+                          wx.setStorageSync('userInfo', res.userInfo);
+                          //this.globalData.userInfo = res.userInfo;
+
+                          // 发送用户信息到后台
+                          sendUserInfoToBackend(res.userInfo);
+                        }
+                      });
+                    }
+                  }
+                });
                 // 假设后端返回用户信息
                 this.setData({
                   isLogin: true,
@@ -68,6 +118,7 @@ Page({
         }
       }
     });
+    this.onLoad();
   }
 });
 
