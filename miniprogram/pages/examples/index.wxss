@@ -68,3 +68,16 @@
   margin-bottom: 20px; /* 登录按钮与内容之间的间隔 */
   font-size: 14px;
 }
+
+.use-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%; /* 按钮宽度，根据需要调整 */
+  height: 40px; /* 按钮高度 */
+  background-color: #74bb74; /* 绿 */
+  color: white; /* 字体颜色 */
+  border-radius: 20px; /* 按钮圆角 */
+  font-size: 13px; /* 字体大小 */
+  margin: auto; /* 确保按钮在容器内水平居中 */
+}
