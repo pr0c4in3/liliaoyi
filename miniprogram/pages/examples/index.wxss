@@ -81,3 +81,9 @@
   font-size: 13px; /* 字体大小 */
   margin: auto; /* 确保按钮在容器内水平居中 */
 }
+
+.button-box{
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
