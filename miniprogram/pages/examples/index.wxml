@@ -13,13 +13,13 @@
   </view>
   
   <!-- 病患信息展示 -->
-  <view class="patient-info">
+  <view class="patient-info" wx:if="{{isLogin}}">
     <text>您的信息：</text>
     <!-- 这里可以添加病患信息的展示，这里请求后端数据库 -->
   </view>
   
   <!-- 病患状态和治疗过程照片，这里也请求后端数据库 -->
-  <view class="patient-photos">
+  <view class="patient-photos" wx:if="{{isLogin}}">
     <text>您的治疗照片：</text>
     <view wx:for="{{patientPhotos}}" wx:key="index" class="photo-container">
       <image src="{{item}}" mode="aspectFill" />
@@ -27,7 +27,7 @@
   </view>
   
   <!-- 使用时长和周期记录 -->
-  <view class="usage-record">
+  <view class="usage-record" wx:if="{{isLogin}}">
     <text>使用时长和周期记录：</text>
     <!-- 这里可以添加使用时长和周期记录的展示 -->
   </view>
