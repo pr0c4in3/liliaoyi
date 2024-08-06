@@ -56,6 +56,7 @@
         "iconPath": "images/icons/usercenter.png",
         "selectedIconPath": "images/icons/usercenter-active.png"
       }
+      
     ]
   }
 }

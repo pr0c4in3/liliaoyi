@@ -34,7 +34,8 @@ Page({
       if (userInfo) {
         // 发送用户信息到后台
         wx.request({
-          url: 'http://127.0.0.1:8080/user', // 替换为你的后台API地址
+          url: 'http://6401f344.r3.cpolar.cn/user',
+          // url: 'http://127.0.0.1:8080/user', // 替换为你的后台API地址
           method: 'POST',
           data: {
             userInfo: userInfo
@@ -61,7 +62,8 @@ Page({
         if (res.code) {
           // 发起网络请求到本地服务器
           wx.request({
-            url: 'http://127.0.0.1:8080/login', // 替换为你的本地服务器地址和登录接口路径
+            url: 'http://6401f344.r3.cpolar.cn/login',
+            // url: 'http://127.0.0.1:8080/login', // 替换为你的本地服务器地址和登录接口路径
             method: 'POST',
             header: {
               'content-type': 'application/json' // 设置请求头为JSON类型
@@ -118,51 +120,10 @@ Page({
         }
       }
     });
-    this.onLoad();
+    console.log("刷新页面");
+    this.onShow();
   }
 });
 
 
 
-// // pages/me/index.js
-// Page({
-  /**
-   * 页面的初始数据
-   */
-//   data: {
-//     openId: '',
-//     showUploadTip: false,
-//   },
-
-//   getOpenId() {
-//     wx.showLoading({
-//       title: '',
-//     });
-//     wx.cloud
-//       .callFunction({
-//         name: 'quickstartFunctions',
-//         data: {
-//           type: 'getOpenId',
-//         },
-//       })
-//       .then((resp) => {
-//         this.setData({
-//           haveGetOpenId: true,
-//           openId: resp.result.openid,
-//         });
-//         wx.hideLoading();
-//       })
-//       .catch((e) => {
-//         this.setData({
-//           showUploadTip: true,
-//         });
-//         wx.hideLoading();
-//       });
-//   },
-
-//   gotoWxCodePage() {
-//     wx.navigateTo({
-//       url: `/pages/exampleDetail/index?envId=${envList?.[0]?.envId}&type=getMiniProgramCode`,
-//     });
-//   },
-// });
