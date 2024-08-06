@@ -66,4 +66,5 @@
   display: flex;
   justify-content: center; /* 水平居中 */
   margin-bottom: 20px; /* 登录按钮与内容之间的间隔 */
+  font-size: 14px;
 }
