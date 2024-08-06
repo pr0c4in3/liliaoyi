@@ -1,0 +1,31 @@
+.container {
+  padding: 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.instruction-list {
+  margin-left: 20px;
+}
+
+.instruction-item {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.word {
+  font-size: 10px;
+  line-height: 1.5;
+  color: #333;
+}

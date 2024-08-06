@@ -1,0 +1,62 @@
+<text class="word">
+王氏中医无形针理疗仪是一款结合传统中医针灸理论与现代电子科技的创新医疗产品。它通过电子脉冲激发电放针产生电子碰撞，形成电离能量场，模拟传统针灸的刺激效果，实现以下主要功能与功效：
+1. 激活细胞活力：增强细胞动力，改善微循环，促进气血运行。
+2. 调节酸碱平衡：通过细胞电位调节，达到消炎、镇静、镇痛的效果。
+3. 神经系统平衡：改善神经细胞电位，缓解精神紧张，增强免疫力。
+4. 免疫激活：激发自愈力，减缓衰老，提升整体健康。
+5. 美容养颜：促进胶原蛋白生成，抑制自由基，改善皮肤健康。
+6. 大脑功能强化：调整脑波，提升记忆力、学习力和创造力。
+7. 血液质量提升：改善血液粘稠度，加快新陈代谢，净化血液。
+该理疗仪利用非接触式治疗，提供个性化模式切换，适用于医疗机构和家庭，为患者和亚健康人群提供安全、有效、便捷的治疗与保健服务。</text>
+<view class="container">
+  <view class="section">
+    <text class="section-title">使用说明：</text>
+    <view class="instruction-list">
+      <view class="instruction-item">治疗距离：针板与体表保持1-2厘米的距离。</view>
+      <view class="instruction-item">面部皮肤病：对痤疮、青春痘等有特效，3-5次治疗后可见效。</view>
+      <view class="instruction-item">皮肤炎症：皮炎、湿疹等1周内显效，配合中药10天左右可治愈。</view>
+      <view class="instruction-item">智力开发与缓解疲劳：适用于头晕脑胀、眼花干涩等症状，提高精神状态。</view>
+      <view class="instruction-item">改善睡眠：适用于失眠、神经衰弱等症状，每天1-2次，每次1-2小时，30天左右显效。</view>
+      <view class="instruction-item">慢性疾病：对结节、淤堵等，每日2-3次，每次2小时以上，长期治疗。</view>
+      <view class="instruction-item">四肢及关节痛：根据病情使用，10天左右显效。</view>
+      <view class="instruction-item">渗出性胸膜炎等：每日2-3次，每次2小时以上，根据病情设定治疗方案。</view>
+
+      <!-- 其他使用说明项按照以上格式添加 -->
+    </view> 
+  </view>
+  
+  <view class="section">
+    <text class="section-title">调理周期：</text>
+    <view class="instruction-list">
+      <view class="instruction-item">30分钟：改善呼吸，缓解疲劳。</view>
+      <view class="instruction-item">1-2小时：深度睡眠，改善急慢性炎症。</view>
+      <view class="instruction-item">1-2周：改善失眠，神经衰弱，面部微皱纹消失。</view>
+      <view class="instruction-item">1-2个月：改善各类肿胀、水肿，男科、妇科问题。</view>
+      <view class="instruction-item">3个月以上：改善糖尿病，预防老年疾病。</view>
+      <!-- 其他调理周期项按照以上格式添加 -->
+    </view>
+  </view>
+  
+  <view class="section">
+    <text class="section-title">注意事项：</text>
+    <view class="instruction-list">
+      <view class="instruction-item">病史告知：有过往疾病史需提前告知。</view>
+
+<view class="instruction-item">心脏金属支架：装有金属支架或起搏器的患者禁止使用。</view>
+<view class="instruction-item">脑颅金属物：脑颅内含有金属物体的患者禁止使用。</view>
+<view class="instruction-item">首次使用：需联系医护人员进行健康检测。</view>
+<view class="instruction-item">活动性出血：出血患者禁止使用。</view>
+<view class="instruction-item">重症患者：急/危、重症患者及神志不清者禁止使用。</view>
+<view class="instruction-item">孕妇：孕妇禁止使用。</view>
+<view class="instruction-item">电子产品：勿佩戴耳机、助听器等，以免损坏。</view>
+<view class="instruction-item">停电处理：停电时拔下电源插头，雷电天气暂停使用。</view>
+<view class="instruction-item">电子产品距离：禁止其他电子产品靠近2米以内。</view>
+<view class="instruction-item">电源规格：禁止使用非220V/50HZ电源。</view>
+<view class="instruction-item">仪器操作：禁止向仪器窗面板内插入异物。</view>
+<view class="instruction-item">插座使用：禁止与其他电子产品共用插座，使用独立带接地插座。</view>
+<view class="instruction-item">环境使用：禁止在水蒸气、可燃性气体、热源、火源或阳光下使用。</view>
+<view class="instruction-item">运行期间：理疗仪运行期间禁止触碰设备。</view>
+      <!-- 其他注意事项项按照以上格式添加 -->
+    </view>
+  </view>
+</view>

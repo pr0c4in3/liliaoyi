@@ -1,36 +1,17 @@
-const { envList } = require("../../envList");
-const { QuickStartPoints, QuickStartSteps } = require("./constants");
-
 Page({
-  data: {
-    knowledgePoints: QuickStartPoints,
-    steps: QuickStartSteps,
-  },
+  // 其他页面逻辑...
 
-  copyCode(e) {
-    const code = e.target?.dataset?.code || '';
-    wx.setClipboardData({
-      data: code,
-      success: () => {
-        wx.showToast({
-          title: '已复制',
-        })
-      },
-      fail: (err) => {
-        console.error('复制失败-----', err);
-      }
-    })
-  },
-
-  discoverCloud() {
-    wx.switchTab({
-      url: '/pages/examples/index',
-    })
-  },
-
-  gotoGoodsListPage() {
+  // 定义跳转到使用说明页面的函数
+  goToInstructions: function() {
+    // 调用 wx.navigateTo 方法进行页面跳转
     wx.navigateTo({
-      url: '/pages/goods-list/index',
-    })
-  },
+      url: '/pages/instruction/index', // 指定要跳转到的页面路径
+      success: function(res) {
+        console.log('跳转成功');
+      },
+      fail: function(err) {
+        console.error('跳转失败', err);
+      }
+    });
+  }
 });
