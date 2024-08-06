@@ -31,6 +31,7 @@
     <text>使用时长和周期记录：</text>
     <!-- 这里可以添加使用时长和周期记录的展示 -->
   </view>
+  <button class="login-button" bindtap="goToUse">使用王氏中医理疗仪</button>
 </view>
 
 

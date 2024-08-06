@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "王氏中医理疗仪",
+  "usingComponents": {
+    "cloud-tip-modal": "/components/cloudTipModal/index"
+  }
+}

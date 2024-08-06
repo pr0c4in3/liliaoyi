@@ -1,0 +1,6 @@
+<view class="container">
+  <text class="timer-display">{{displayTime}}</text>
+  <button class="start-btn" bindtap="startTimer">开始</button>
+  <button class="pause-btn" bindtap="pauseTimer">暂停</button>
+  <button class="submit-btn" bindtap="submitTimer">提交</button>
+</view>
