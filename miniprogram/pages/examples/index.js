@@ -68,6 +68,20 @@ Page({
       }
     });
   },
+  goToInfo: function() {
+    // 跳转到提交信息
+    wx.navigateTo({
+      url: '/pages/submit-info/index', // 替换为你的登录页面路径
+      success: function(res) {
+        console.log('跳转成功');
+      },
+      fail: function(err) {
+        console.error('跳转失败', err);
+      }
+    });
+  },
+
+
   getUserUsageTime: function() {
     console.log('gettime')
     let info= wx.getStorageSync('userInfo');

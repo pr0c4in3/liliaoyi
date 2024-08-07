@@ -1,0 +1,17 @@
+.container {
+  padding: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.picker {
+  border: 1px solid #ccc;
+  padding: 5px;
+}

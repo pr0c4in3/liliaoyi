@@ -1,0 +1,25 @@
+<view class="container">
+  <form bindsubmit="submitUserInfo">
+
+    <view class="input-group">
+      <text class="label">姓名:</text>
+      <input name="name" type="text" placeholder="请输入姓名" />
+    </view>
+    <view class="input-group">
+      <text class="label">性别:</text>
+        <!-- 确保picker组件的mode和range属性正确设置 -->
+      <picker mode="selector" range="{{genderOptions}}" bindchange="bindGenderChange" value="{{info.gender}}">
+        <view class="picker">{{info.gender}}</view>
+      </picker>
+    </view>
+    <view class="input-group">
+      <text class="label">生日:</text>
+      <input name="birthday" type="date" placeholder="请选择生日" />
+    </view>
+    <view class="input-group">
+      <text class="label">电话:</text>
+      <input name="phone" type="number" placeholder="请输入电话号码" />
+    </view>
+    <button form-type="submit">提交信息</button>
+  </form>
+</view>
