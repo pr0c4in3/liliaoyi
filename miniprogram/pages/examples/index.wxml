@@ -15,8 +15,10 @@
   <!-- 病患信息展示 -->
   <view class="patient-info" wx:if="{{isLogin}}">
     <text>您的信息：</text>
+    <button class="up-button" bindtap="goToUse" wx:if="{{isLogin}}">提交/修改信息</button>
     <!-- 这里可以添加病患信息的展示，这里请求后端数据库 -->
   </view>
+  
   
   <!-- 病患状态和治疗过程照片，这里也请求后端数据库 -->
   <view class="patient-photos" wx:if="{{isLogin}}">

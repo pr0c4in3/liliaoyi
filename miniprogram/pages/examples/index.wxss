@@ -91,3 +91,16 @@
 .small{
   font-size:11px;
 }
+
+.up-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px; /* 减少按钮宽度到30px */
+  height: 25px;
+  background-color: #66a8df;
+  color: white;
+  border-radius: 20px;
+  font-size: 11px;
+  margin: auto;
+}
