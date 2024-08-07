@@ -29,7 +29,14 @@
   <!-- 使用时长和周期记录 -->
   <view class="usage-record" wx:if="{{isLogin}}">
     <text>使用时长和周期记录：</text>
-    <!-- 这里可以添加使用时长和周期记录的展示 -->
+    <view class="usage-list">
+      <block wx:for="{{usageRecords}}" wx:key="index">
+        <view class="usage-item">
+          <text>开始时间：{{item.startTime}}</text>
+          <text>使用时长：{{item.duration}}</text>
+        </view>
+      </block>
+    </view>
   </view>
   <view class="button-box">
     <button class="use-button" bindtap="goToUse" wx:if="{{isLogin}}">使用王氏中医理疗仪</button>

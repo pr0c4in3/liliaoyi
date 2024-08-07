@@ -8,6 +8,7 @@ Page({
   },
   onShow: function() {
     this.checkLoginStatus();
+    this.getUserUsageTime();
   },
   checkLoginStatus: function() {
     // 检查登录状态
@@ -64,7 +65,39 @@ Page({
         console.error('跳转失败', err);
       }
     });
+  },
+  getUserUsageTime: function() {
+    console.log('gettime')
+    let info= wx.getStorageSync('userInfo');
+    const nickname = info.nickName;
     
+    wx.request({
+      // url: 'http://127.0.0.1:8080/getUseTime', // 替换为你的后端地址
+      url: 'http://6401f344.r3.cpolar.cn/getUseTime',
+      method: 'POST',
+      data: {
+        nickname: nickname
+      },
+      success: (res) => {
+        if (res.statusCode === 200) {
+          console.log(res.data)
+          this.setData({
+            usageRecords: res.data 
+          });
+        } else {
+          wx.showToast({
+            title: '获取数据失败',
+            icon: 'none'
+          });
+        }
+      },
+      fail: () => {
+        wx.showToast({
+          title: '请求失败',
+          icon: 'none'
+        });
+      }
+    });
   }
 });
 
