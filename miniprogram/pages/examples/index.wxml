@@ -44,7 +44,7 @@
       <block wx:for="{{usageRecords}}" wx:key="index">
         <view class="usage-item">
           <text class="small">开始时间：{{item.startTime}}  </text>
-          <text class="small">使用时长：{{item.duration}}</text>
+          <text class="small">使用时长：{{item.duration}} 分钟</text>
         </view>
       </block>
     </view>
