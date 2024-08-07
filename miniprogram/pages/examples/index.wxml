@@ -32,8 +32,8 @@
     <view class="usage-list">
       <block wx:for="{{usageRecords}}" wx:key="index">
         <view class="usage-item">
-          <text>开始时间：{{item.startTime}}</text>
-          <text>使用时长：{{item.duration}}</text>
+          <text class="small">开始时间：{{item.startTime}}  </text>
+          <text class="small">使用时长：{{item.duration}}</text>
         </view>
       </block>
     </view>

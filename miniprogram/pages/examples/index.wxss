@@ -87,3 +87,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.small{
+  font-size:11px;
+}
