@@ -10,6 +10,7 @@ Page({
     this.checkLoginStatus();
     if(this.data.isLogin){
       this.getUserUsageTime();
+      this.getUserInfo();
     }
   },
   checkLoginStatus: function() {
@@ -100,6 +101,40 @@ Page({
           this.setData({
             usageRecords: res.data 
           });
+        } else {
+          wx.showToast({
+            title: '获取数据失败',
+            icon: 'none'
+          });
+        }
+      },
+      fail: () => {
+        wx.showToast({
+          title: '请求失败',
+          icon: 'none'
+        });
+      }
+    });
+  },
+  getUserInfo: function() {
+    console.log('getinfo')
+    let info= wx.getStorageSync('userInfo');
+    const nickname = info.nickName;
+    
+    wx.request({
+      // url: 'http://127.0.0.1:8080/getUserInfo', // 替换为你的后端地址
+      url: 'http://6401f344.r3.cpolar.cn/getUserInfo',
+      method: 'POST',
+      data: {
+        nickname: nickname
+      },
+      success: (res) => {
+        if (res.statusCode === 200) {
+          // console.log(res.data)
+          this.setData({
+            personInfo: res.data 
+          });
+          console.log(this.personInfo)
         } else {
           wx.showToast({
             title: '获取数据失败',
