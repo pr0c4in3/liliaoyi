@@ -149,6 +149,61 @@ Page({
         });
       }
     });
+  },
+  chooseImage: function() {
+    const that = this;
+    wx.chooseMedia({
+      count: 1,
+      mediaType: ['image'],
+      sourceType: ['album', 'camera'],
+      success: function(res) {
+        const tempFilePaths = res.tempFiles[0].tempFilePath;
+        that.uploadPhoto(tempFilePaths);
+      }
+    });
+  },
+  uploadPhoto: function(tempFilePath) {
+    let info= wx.getStorageSync('userInfo');
+    const nickname = info.nickName;
+    const that = this;
+    // console.log(tempFilePath)
+    wx.uploadFile({
+      url: 'http://6401f344.r3.cpolar.cn/upload',
+      // url: 'http://127.0.0.1:8080/upload', // 你的服务器上传接口
+      filePath: tempFilePath,
+      name: 'photo',
+      formData: {
+        'nickname': nickname
+      },
+      success: function(res) {
+        const data = JSON.parse(res.data);
+        if (data.success) {
+          wx.showToast({
+            title: '上传成功',
+            icon: 'success',
+            duration: 2000
+          });
+          that.setData({
+            photoList: that.data.photoList.concat(data.filePath) // 假设服务器返回新文件的路径
+          });
+        } else {
+          wx.showToast({
+            title: '上传失败',
+            icon: 'none',
+            duration: 2000
+          });
+        }
+      },
+      fail: function(err) {
+        console.error(err);
+        wx.showToast({
+          title: '上传失败',
+          icon: 'none',
+          duration: 2000
+        });
+      }
+    });
   }
+  
 });
 

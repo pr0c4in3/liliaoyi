@@ -35,6 +35,7 @@
     <view wx:for="{{patientPhotos}}" wx:key="index" class="photo-container">
       <image src="{{item}}" mode="aspectFill" />
     </view>
+    <button class="up-button" bindtap="chooseImage" wx:if="{{isLogin}}">上传照片</button>
   </view>
   
   <!-- 使用时长和周期记录 -->
