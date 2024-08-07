@@ -8,7 +8,9 @@ Page({
   },
   onShow: function() {
     this.checkLoginStatus();
-    this.getUserUsageTime();
+    if(this.data.isLogin){
+      this.getUserUsageTime();
+    }
   },
   checkLoginStatus: function() {
     // 检查登录状态
