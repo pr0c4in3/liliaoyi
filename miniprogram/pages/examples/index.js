@@ -11,6 +11,7 @@ Page({
     if(this.data.isLogin){
       this.getUserUsageTime();
       this.getUserInfo();
+      this.getUserPhoto();
     }
   },
   checkLoginStatus: function() {
@@ -134,7 +135,7 @@ Page({
           this.setData({
             personInfo: res.data 
           });
-          console.log(this.personInfo)
+          console.log(this.data.personInfo)
         } else {
           wx.showToast({
             title: '获取数据失败',
@@ -145,6 +146,40 @@ Page({
       fail: () => {
         wx.showToast({
           title: '请求失败',
+          icon: 'none'
+        });
+      }
+    });
+  },
+  getUserPhoto: function() {
+    console.log('getphoto')
+    let info= wx.getStorageSync('userInfo');
+    const nickname = info.nickName;
+    const that =this;
+    wx.request({
+      // url: 'http://127.0.0.1:8080/getPhoto', // 替换为你的后端地址
+      url: 'http://6401f344.r3.cpolar.cn/getPhoto',
+      method: 'POST',
+      data: {
+        nickname: nickname
+      },
+      success: function(res) {
+        if (res.statusCode === 200) {
+          // 假设后端返回的是治疗照片的URL数组
+          that.setData({
+            patientPhotos: res.data.photos
+          });
+          console.log(that.data.patientPhotos)
+        } else {
+          wx.showToast({
+            title: '请求失败',
+            icon: 'none'
+          });
+        }
+      },
+      fail: function() {
+        wx.showToast({
+          title: '网络请求失败',
           icon: 'none'
         });
       }

@@ -44,9 +44,10 @@
 }
 
 .photo-container {
-  width: 100px;
-  height: 100px;
-  margin-right: 10px;
+  width: calc(33.333% - 10px); /* 每行三张图片，减去间距 */
+  margin-right: 10px; /* 右边距 */
+  margin-bottom: 10px; /* 下边距 */
+  box-sizing: border-box; /* 边框计算在宽度内 */
 }
 
 .login-button {
