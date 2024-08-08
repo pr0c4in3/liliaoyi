@@ -147,8 +147,12 @@ Page({
     console.log(this.isHaveName);
   },
   formsubmit(e){
+    let myinfo={'nickName':'微信用户'};
+    wx.setStorageSync('userInfo', myinfo);
     const nickName = e.detail.value.nickname;
     let userInfo = wx.getStorageSync('userInfo');
+    console.log('测试昵称',nickName);
+    console.log('测试info',userInfo);
     userInfo.nickName=nickName;
     wx.setStorageSync('userInfo', userInfo);
     console.log("nickName", nickName);
