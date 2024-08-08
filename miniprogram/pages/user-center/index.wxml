@@ -4,7 +4,14 @@
     <button class="login-button" open-type="getUserInfo" bindgetuserinfo="onLogin">微信登录</button>
   </view>
   <view wx:if="{{isLogin}}" class="user-section">
-    <text class="welcome-message">欢迎, {{userInfo.nickName}}!</text>
+    <view wx:if="{{isHaveName}}">
+      <text class="welcome-message">欢迎, {{userInfo.nickName}}!</text>
+    </view>
     <image class="avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill" />
   </view>
+  <form wx:if="{{isLogin&&!isHaveName}}"  bindsubmit="formsubmit">
+    <text>{{isLogin}} {{isHaveName}}</text>
+    <input type="nickname" placeholder="请输入昵称" name="nickname" />
+    <button form-type="submit" type="primary">提交</button>
+  </form>
 </view>

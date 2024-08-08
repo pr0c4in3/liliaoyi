@@ -2,11 +2,13 @@
 Page({
   data: {
     isLogin: false,
+    isHaveName: false,
     userInfo: {}
   },
   
   onShow: function() {
     this.checkLoginStatus();
+    this.isName();
   },
   checkLoginStatus: function() {
     // 检查登录状态
@@ -127,6 +129,31 @@ Page({
     });
     console.log("刷新页面");
     this.onShow();
+  },
+  isName: function(e) {
+    let userInfo = wx.getStorageSync('userInfo');
+    // console.log('name',userInfo.nickName);
+    if(userInfo.nickName=='微信用户'||userInfo.nickName==null){
+      this.setData({
+        isHaveName:false
+      })
+      // console.log(this.isHaveName);
+    }else{
+      this.setData({
+        isHaveName:true
+      })
+      // console.log(this.isHaveName);
+    }
+    console.log(this.isHaveName);
+  },
+  formsubmit(e){
+    const nickName = e.detail.value.nickname;
+    let userInfo = wx.getStorageSync('userInfo');
+    userInfo.nickName=nickName;
+    wx.setStorageSync('userInfo', userInfo);
+    console.log("nickName", nickName)
+    this.onShow();
+    // do something
   }
 });
 
