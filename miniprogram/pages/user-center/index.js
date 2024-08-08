@@ -151,7 +151,25 @@ Page({
     let userInfo = wx.getStorageSync('userInfo');
     userInfo.nickName=nickName;
     wx.setStorageSync('userInfo', userInfo);
-    console.log("nickName", nickName)
+    console.log("nickName", nickName);
+    const app = getApp();
+    const baseURL = app.globalData.baseURL; // 获取 baseURL
+    wx.request({
+      url: baseURL+'user',
+      // url: 'http://127.0.0.1:8080/user', // 替换为你的后台API地址
+      method: 'POST',
+      data: {
+        userInfo: userInfo
+      },
+      success: (res) => {
+        console.log('用户信息发送成功', res);
+        // 这里可以处理发送成功后的逻辑
+      },
+      fail: (err) => {
+        console.error('发送用户信息失败', err);
+        // 这里可以处理发送失败的逻辑
+      }
+    });
     this.onShow();
     // do something
   }

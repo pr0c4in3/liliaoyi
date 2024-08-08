@@ -10,7 +10,7 @@
     <image class="avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill" />
   </view>
   <form wx:if="{{isLogin&&!isHaveName}}"  bindsubmit="formsubmit">
-    <text>{{isLogin}} {{isHaveName}}</text>
+    <!-- <text>{{isLogin}} {{isHaveName}}</text> -->
     <input type="nickname" placeholder="请输入昵称" name="nickname" />
     <button form-type="submit" type="primary">提交</button>
   </form>
