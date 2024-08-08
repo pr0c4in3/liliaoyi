@@ -33,8 +33,10 @@ Page({
       // 检查用户信息是否存在
       if (userInfo) {
         // 发送用户信息到后台
+        const app = getApp();
+        const baseURL = app.globalData.baseURL; // 获取 baseURL
         wx.request({
-          url: 'http://6401f344.r3.cpolar.cn/user',
+          url: baseURL+'user',
           // url: 'http://127.0.0.1:8080/user', // 替换为你的后台API地址
           method: 'POST',
           data: {
@@ -60,9 +62,12 @@ Page({
     wx.login({
       success: (res) => {
         if (res.code) {
+          const app = getApp();
+          const baseURL = app.globalData.baseURL; // 获取 baseURL
           // 发起网络请求到本地服务器
           wx.request({
-            url: 'http://6401f344.r3.cpolar.cn/login',
+            url: baseURL+'login',
+            // url: 'http://6401f344.r3.cpolar.cn/login',
             // url: 'http://127.0.0.1:8080/login', // 替换为你的本地服务器地址和登录接口路径
             method: 'POST',
             header: {

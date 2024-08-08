@@ -97,10 +97,12 @@ Page({
       duration: duration,
       userName: nickname,
     };
-
+    const app = getApp();
+    const baseURL = app.globalData.baseURL; // 获取 baseURL
     // 这里使用 wx.request 来模拟数据上传到服务器
     wx.request({
-      url: 'http://6401f344.r3.cpolar.cn/timer',
+      url: baseURL+'timer',
+      // url: 'http://6401f344.r3.cpolar.cn/timer',
       // url: 'http://127.0.0.1:8080/timer', // 替换为你的服务器地址
       method: 'POST',
       data: userInfo1,

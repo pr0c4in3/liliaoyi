@@ -14,6 +14,8 @@ App({
       });
     }
 
-    this.globalData = {};
+    this.globalData = {
+      baseURL: 'http://3f62006c.r3.cpolar.cn/' // 替换为你的域名
+    };
   }
 });

@@ -88,10 +88,13 @@ Page({
     console.log('gettime')
     let info= wx.getStorageSync('userInfo');
     const nickname = info.nickName;
-    
+    const app = getApp();
+    const baseURL = app.globalData.baseURL; // 获取 baseURL
+
     wx.request({
       // url: 'http://127.0.0.1:8080/getUseTime', // 替换为你的后端地址
-      url: 'http://6401f344.r3.cpolar.cn/getUseTime',
+      // url: 'http://6401f344.r3.cpolar.cn/getUseTime',
+      url: baseURL+'getUseTime',
       method: 'POST',
       data: {
         nickname: nickname
@@ -121,10 +124,12 @@ Page({
     console.log('getinfo')
     let info= wx.getStorageSync('userInfo');
     const nickname = info.nickName;
-    
+    const app = getApp();
+    const baseURL = app.globalData.baseURL; // 获取 baseURL
     wx.request({
       // url: 'http://127.0.0.1:8080/getUserInfo', // 替换为你的后端地址
-      url: 'http://6401f344.r3.cpolar.cn/getUserInfo',
+      // url: 'http://6401f344.r3.cpolar.cn/getUserInfo',
+      url: baseURL+'getUserInfo',
       method: 'POST',
       data: {
         nickname: nickname
@@ -156,9 +161,12 @@ Page({
     let info= wx.getStorageSync('userInfo');
     const nickname = info.nickName;
     const that =this;
+    const app = getApp();
+    const baseURL = app.globalData.baseURL; // 获取 baseURL
     wx.request({
       // url: 'http://127.0.0.1:8080/getPhoto', // 替换为你的后端地址
-      url: 'http://6401f344.r3.cpolar.cn/getPhoto',
+      // url: 'http://6401f344.r3.cpolar.cn/getPhoto',
+      url: baseURL+'getPhoto',
       method: 'POST',
       data: {
         nickname: nickname
@@ -201,10 +209,13 @@ Page({
     let info= wx.getStorageSync('userInfo');
     const nickname = info.nickName;
     const that = this;
+    const app = getApp();
+    const baseURL = app.globalData.baseURL; // 获取 baseURL
     // console.log(tempFilePath)
     wx.uploadFile({
-      url: 'http://6401f344.r3.cpolar.cn/upload',
+      // url: 'http://6401f344.r3.cpolar.cn/upload',
       // url: 'http://127.0.0.1:8080/upload', // 你的服务器上传接口
+      url: baseURL+'upload',
       filePath: tempFilePath,
       name: 'photo',
       formData: {

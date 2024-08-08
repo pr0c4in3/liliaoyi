@@ -39,9 +39,12 @@ Page({
     });
     const userInfo = this.data.info;
     console.log(userInfo)
+    const app = getApp();
+    const baseURL = app.globalData.baseURL; // 获取 baseURL
     // 这里需要调用API接口提交数据
     wx.request({
-      url: 'http://6401f344.r3.cpolar.cn/submitInfo',
+      url: baseURL+'submitInfo',
+      // url: 'http://6401f344.r3.cpolar.cn/submitInfo',
       // url: 'http://127.0.0.1:8080/submitInfo', // 你的API地址
       method: 'POST',
       data: userInfo,
