@@ -22,7 +22,7 @@
 }
 
 .nickname {
-  font-size: 14px; /* 昵称字体大小 */
+  font-size: 18px; /* 昵称字体大小 */
   color: #333;
   position: absolute; /* 绝对定位 */
   top: 50%; /* 昵称位置在头像的垂直中心 */
@@ -90,7 +90,7 @@
 }
 
 .small{
-  font-size:15px;
+  font-size:20px;
 }
 
 .up-button{

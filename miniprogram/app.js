@@ -15,7 +15,7 @@ App({
     }
 
     this.globalData = {
-      baseURL: 'http://c86ed76.r3.cpolar.cn/' // 替换为你的域名
+      baseURL: 'http://95ze7057yn86.vicp.fun/' // 替换为你的域名
     };
   }
 });
