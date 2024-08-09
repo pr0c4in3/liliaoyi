@@ -15,7 +15,7 @@ App({
     }
 
     this.globalData = {
-      baseURL: 'http://3f62006c.r3.cpolar.cn/' // 替换为你的域名
+      baseURL: 'http://c86ed76.r3.cpolar.cn/' // 替换为你的域名
     };
   }
 });
