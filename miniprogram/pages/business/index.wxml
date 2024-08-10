@@ -1,10 +1,6 @@
-<view class="container">
-<h1 class='head'>演示视频</h1>
-  <channel-video 
-    finder-user-name="sphzXJiuQxiFBUX" 
-    feed-id="export/UzFfAgtgekIEAQAAAAAA9R8QrZ5s0QAAAAstQy6ubaLX4KHWvLEZgBPEzoFIYTwJZ-KGzNPgMJpxNVC3CoagINzC4ET4mS8B"
-    autoplay="false" 
-    loop="false"
-    binderror="handleError"
-  ></channel-video>
-</view>
+<!-- <view class="pageView">
+<video id="myVideo" objectFit="cover" autoplay="true" bindended="playEnd" src="{{videUrl}}">
+	</video>
+</view> -->
+<video src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4" autoplay="autoplay" controls="controls" loop="-1" poster="false.png">
+25     </video>

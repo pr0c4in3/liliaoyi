@@ -1,9 +1,15 @@
-.container {
+/* pages/videoPlay/videoPlay.wxss */
+
+.pageView{
   display: flex;
+  background-color: #000;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 1154rpx;
 }
-.head{
-  font-size: xx-large;
-  font-weight: 800;
+video{
+	width: 100%;
+	height: 422rpx;
 }
