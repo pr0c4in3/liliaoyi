@@ -37,7 +37,7 @@
       },
       {
         "pagePath": "pages/business/index",
-        "text": "评价",
+        "text": "演示视频",
         "iconPath": "images/icons/business.png",
         "selectedIconPath": "images/icons/business-active.png"
       },
