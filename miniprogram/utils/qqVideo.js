@@ -61,6 +61,7 @@ getVideoes (vid) {
             part_format_id = data['vl']['vi'][0]['cl']['ci'][i - 1]['keyid'].split('.')[1]
             filename = [fn_pre, magic_str, i.toString(), video_type].join('.')
           }
+          console.log(part_format_id, vid, filename, host, seg_cnt);
           requestVideoUrls(part_format_id, vid, filename, host, seg_cnt).then(function (response) {
         resolve(response);
          });
@@ -82,9 +83,11 @@ function requestVideoUrls(part_format_id, vid, fileName, host,videoCount) {
     wx.request({
       url: keyApi,
       success: function (res) {
+        console.log(res);
         var dataJson = res.data.replace(/QZOutputJson=/, '') + "qwe";
         var dataJson1 = dataJson.replace(/;qwe/, '');
         var data = JSON.parse(dataJson1);
+        console.log(data);
         if (data.key != undefined) {
           var vkey = data['key']
           var url = host + fileName + '?vkey=' + vkey;

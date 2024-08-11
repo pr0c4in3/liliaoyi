@@ -2,5 +2,5 @@
 <video id="myVideo" objectFit="cover" autoplay="true" bindended="playEnd" src="{{videUrl}}">
 	</video>
 </view> -->
-<video src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4" autoplay="autoplay" controls="controls" loop="-1" poster="false.png">
-25     </video>
+<video src="https://xy120x240x147x5xy.mcdn.bilivideo.cn:8082/v1/resource/1638050223-1-100047.m4s?agrr=0&build=0&buvid=&bvc=vod&bw=71031&deadline=1723383219&e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M%3D&f=u_0_0&gen=playurlv2&logo=80000000&mid=0&nbs=1&nettype=0&og=cos&oi=2028293725&orderid=0%2C3&os=coso1bv&platform=pc&sign=a7ea7d&traceid=trWRVanlnUEQDS_0_e_N&uipk=5&uparams=e%2Cuipk%2Cnbs%2Cdeadline%2Cgen%2Cos%2Coi%2Ctrid%2Cmid%2Cplatform%2Cog&upsig=a57dcea76e38c76f53f300a006f751c0" type="video/m3u8" autoplay="autoplay" controls="controls" loop="-1" poster="false.png">
+     </video>

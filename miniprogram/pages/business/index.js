@@ -7,7 +7,7 @@ import qqVideo from "../../utils/qqVideo.js"
 Page({
   onLoad: function () {
     const options={
-      vid:'p41001r5zwb'
+      vid:'b33648mzunr'
     }
     if (options.vid != undefined) {
       this.setData({
