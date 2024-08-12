@@ -1,6 +1,7 @@
 <view class="container">
   <view class="introduction-item" wx:for="{{introductions}}" wx:key="index">
-    <text class="title">{{item.title}}</text>
+    <text class="title">{{item.title}}
+    </text>
     <text class="content">{{item.content}}</text>
   </view>
 </view>
