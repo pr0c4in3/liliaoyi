@@ -1,31 +1,19 @@
 .container {
   padding: 20px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.section {
+.introduction-item {
   margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
 }
 
-.section-title {
+.title {
   font-size: 18px;
-  font-weight: bold;
   color: #333;
-  margin-bottom: 10px;
 }
 
-.instruction-list {
-  margin-left: 20px;
-}
-
-.instruction-item {
+.content {
   font-size: 14px;
   color: #666;
-  margin-bottom: 5px;
-}
-
-.word {
-  font-size: 10px;
-  line-height: 1.5;
-  color: #333;
 }
