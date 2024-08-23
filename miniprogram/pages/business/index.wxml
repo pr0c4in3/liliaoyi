@@ -1,8 +1,5 @@
-<!-- <view class="pageView">
-<video id="myVideo" objectFit="cover" autoplay="true" bindended="playEnd" src="{{videUrl}}">
-	</video>
-</view> -->
-<view class="pageView">
-<video id="myVideo" objectFit="cover" autoplay="true" bindended="playEnd" src="https://upos-sz-mirrorbd.bilivideo.com/upgcxcode/47/26/500001646542647/500001646542647-1-30032.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&uipk=5&nbs=1&deadline=1723439853&gen=playurlv2&os=bdbv&oi=2028293725&trid=f71485e6be744c99910a0c7d460a18d0u&mid=0&platform=pc&og=hw&upsig=b2ec5b41425d22c513c90b259cff3621&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,mid,platform,og&bvc=vod&nettype=0&orderid=0,3&buvid=&build=0&f=u_0_0&agrr=0&bw=30106&logo=80000000upsig=a57dcea76e38c76f53f300a006f751c0" type="video/m3u8" autoplay="autoplay" controls="controls" loop="-1" poster="false.png">
-     </video>
+<view>
+  <player-component id="tvp-id" playerid="tvp" vid="u3560msityt">
+  <!-- 里面可以放插槽 -->
+</player-component>
 </view>

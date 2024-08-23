@@ -48,5 +48,11 @@
         "selectedIconPath": "images/icons/usercenter-active.png"
       }
     ]
+  },
+  "plugins": {
+    "player": {
+       "version": "2.5.1",
+       "provider": "wxa75efa648b60994b"
+    }
   }
 }

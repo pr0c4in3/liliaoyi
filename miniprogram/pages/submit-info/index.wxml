@@ -20,6 +20,9 @@
       <text class="label">电话:</text>
       <input name="phone" type="number" placeholder="请输入电话号码" />
     </view>
+    <view>
+      <text class="label">注意：以上信息只用于您的信息的显示，如果在意个人隐私也可以不提交</text>
+    </view>
     <button form-type="submit">提交信息</button>
   </form>
 </view>

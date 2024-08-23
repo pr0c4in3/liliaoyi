@@ -15,7 +15,7 @@ App({
     }
 
     this.globalData = {
-      baseURL: 'http://95ze7057yn86.vicp.fun/' // 替换为你的域名
+      baseURL: 'http://119.29.53.233:8080/' // 替换为你的域名
     };
   }
 });

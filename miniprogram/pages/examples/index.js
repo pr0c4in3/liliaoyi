@@ -142,10 +142,10 @@ Page({
           });
           console.log(this.data.personInfo)
         } else {
-          wx.showToast({
-            title: '获取数据失败',
-            icon: 'none'
-          });
+          // wx.showToast({
+          //   title: '获取数据失败',
+          //   icon: 'none'
+          // });
         }
       },
       fail: () => {
